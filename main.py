@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, text
 
 app = FastAPI()
 
-DATABASE_URL = "mysql+pymysql://root:Rithvik%40777@localhost:3306/content_moderation"
+DATABASE_URL = "mysql+pymysql://root:mypassword@localhost:3306/content_moderation"
 engine = create_engine(DATABASE_URL)
 
 
@@ -168,5 +168,6 @@ def reject_comment(comment_id: int):
 
         if result.rowcount == 0:
             raise HTTPException(status_code=404, detail="Comment not found")
+
 
     return {"message": "Comment rejected"}
