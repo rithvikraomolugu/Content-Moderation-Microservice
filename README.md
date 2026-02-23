@@ -5,8 +5,6 @@ This project implements a rule-based Content Moderation Microservice designed to
 
 The service provides RESTful endpoints for comment ingestion, automatic classification, persistence, and moderation workflow management (approve/reject lifecycle). The architecture simulates a real-world Trust & Safety backend system used in content platforms.
 
----
-
 ## Objectives
 - Build a RESTful backend microservice for automated comment moderation
 - Implement weighted toxicity scoring using structured keyword classification
@@ -14,8 +12,6 @@ The service provides RESTful endpoints for comment ingestion, automatic classifi
 - Persist moderation records using relational database integration
 - Implement moderation workflow lifecycle (Pending → Approved / Rejected)
 - Provide filtered retrieval of flagged comments for admin review
-
----
 
 ## System Architecture
 The microservice follows a backend service architecture:
@@ -26,7 +22,6 @@ The microservice follows a backend service architecture:
 - **SQLAlchemy** manages secure parameterized database operations
 - Moderation workflow supports lifecycle state transitions
 
----
 
 ## Moderation Model
 
@@ -48,8 +43,6 @@ Each comment record includes:
 - `is_flagged`
 - `moderation_status`
 
----
-
 ## Database Structure
 
 The `content_moderation` database includes:
@@ -65,8 +58,6 @@ The `content_moderation` database includes:
 - `created_at` (Timestamp)
 
 The database enables persistent storage and moderation state management.
-
----
 
 ## API Endpoints
 
@@ -89,7 +80,6 @@ The database enables persistent storage and moderation state management.
 
 Implements administrative review lifecycle.
 
----
 
 ## Key Features
 - Weighted rule-based toxicity engine
@@ -98,8 +88,6 @@ Implements administrative review lifecycle.
 - Secure parameterized SQL queries
 - Moderation lifecycle management
 - RESTful API design with structured validation
-
----
 
 ## Tools Used
 - Python
